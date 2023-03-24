@@ -12,21 +12,24 @@ struct xkcd: View {
     @ObservedObject var xkcdComics = xkcdViewModel()
     
     var body: some View {
+
         NavigationStack {
-            Text("Is this showing up?")
-            
+            Spacer(minLength: 25)
+            Image("xkcd")
+            Text("The first 365")
+                .font(.title3)
             List {
-                Text("And this?")
-                ForEach(xkcdComics.xkcdData) { xkcd in NavigationLink(xkcd.safe_title) { xkcdDetail(xkcd: xkcd) }
-                    Text("This?")
-                    
+                
+                ForEach(xkcdComics.xkcdData) { xkcd in NavigationLink(String(xkcd.num) + " - " + xkcd.safe_title) { xkcdDetail(xkcd: xkcd) }
                 }
-            }
+            } 
             
+        } .onAppear {
+            xkcdComics.fetchData()
         }
-        .padding()
-    }
-}
+        
+    } 
+} 
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {

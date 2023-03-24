@@ -11,9 +11,9 @@ struct xkcdModel : Codable, Identifiable {
 
     
     let id = UUID()
-    let month : Int
+    let month : String
     let num: Int
-    let year: Int
+    let year: String
     let safe_title: String
     let transcript: String
     let alt: String

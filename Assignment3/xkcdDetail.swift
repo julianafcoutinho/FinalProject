@@ -16,7 +16,13 @@ struct xkcdDetail: View {
         ScrollView {
             VStack() {
                 Text(xkcd.safe_title)
-                AsyncImage(url: URL(string:xkcd.img))
+                AsyncImage(url: URL(string:xkcd.img)) {
+                           image in image
+                        .resizable()
+                        .aspectRatio(contentMode: .fit)
+                } placeholder: {
+                    Image("xkcd")
+                }
             }
         }
     }

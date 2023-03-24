@@ -15,7 +15,7 @@ class xkcdViewModel : ObservableObject {
     private let url2 = "/info.0.json"
     
     func fetchData() {
-        for i in 1...10 {
+        for i in 1...365 {
             if let url = URL(string: url1 + String(i) + url2) {
                 URLSession
                     .shared
