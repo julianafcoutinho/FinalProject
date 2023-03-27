@@ -38,6 +38,31 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A3C3A7C929D139D500F700D4 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				A3C3A7C529CD3E9B00F700D4 /* xkcdDetail.swift */,
+				ACF5E04129BE957F00DD981A /* xkcd.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		A3C3A7CA29D13AA100F700D4 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				A3C3A7C329CD3B1700F700D4 /* xkcdModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		A3C3A7CB29D13AAA00F700D4 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				A3C3A7C129CD388D00F700D4 /* xkcdViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		ACF5E03329BE957F00DD981A = {
 			isa = PBXGroup;
 			children = (
@@ -57,13 +82,12 @@
 		ACF5E03E29BE957F00DD981A /* Assignment3 */ = {
 			isa = PBXGroup;
 			children = (
-				A3C3A7C329CD3B1700F700D4 /* xkcdModel.swift */,
+				A3C3A7CA29D13AA100F700D4 /* Model */,
 				ACF5E03F29BE957F00DD981A /* Assignment3App.swift */,
-				ACF5E04129BE957F00DD981A /* xkcd.swift */,
+				A3C3A7CB29D13AAA00F700D4 /* ViewModel */,
 				ACF5E04329BE958000DD981A /* Assets.xcassets */,
 				ACF5E04529BE958000DD981A /* Preview Content */,
-				A3C3A7C129CD388D00F700D4 /* xkcdViewModel.swift */,
-				A3C3A7C529CD3E9B00F700D4 /* xkcdDetail.swift */,
+				A3C3A7C929D139D500F700D4 /* View */,
 			);
 			path = Assignment3;
 			sourceTree = "<group>";

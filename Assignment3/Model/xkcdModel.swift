@@ -7,7 +7,11 @@
 
 import Foundation
 
-struct xkcdModel : Codable, Identifiable {
+struct xkcdModel : Codable, Identifiable, Comparable {
+    static func < (lhs: xkcdModel, rhs: xkcdModel) -> Bool {
+        return lhs.num < rhs.num
+    }
+    
 
     
     let id = UUID()
@@ -18,4 +22,6 @@ struct xkcdModel : Codable, Identifiable {
     let transcript: String
     let alt: String
     let img: String
+    
+
 }

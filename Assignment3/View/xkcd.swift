@@ -20,7 +20,7 @@ struct xkcd: View {
                 .font(.title3)
             List {
                 
-                ForEach(xkcdComics.xkcdData) { xkcd in NavigationLink(String(xkcd.num) + " - " + xkcd.safe_title) { xkcdDetail(xkcd: xkcd) }
+                ForEach(xkcdComics.xkcdData.sorted()) { xkcd in NavigationLink(String(xkcd.num) + " - " + xkcd.safe_title) { xkcdDetail(xkcd: xkcd) }
                 }
             } 
             
