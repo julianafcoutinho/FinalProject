@@ -11,7 +11,7 @@ import SwiftUI
 struct Assignment3App: App {
     var body: some Scene {
         WindowGroup {
-            xkcd()
+            xkcdStart(amount: 365)
         }
     }
 }

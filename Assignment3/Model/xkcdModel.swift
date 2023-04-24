@@ -12,6 +12,10 @@ struct xkcdModel : Codable, Identifiable, Comparable {
         return lhs.num < rhs.num
     }
     
+    static func == (lhs: xkcdModel, rhs: xkcdModel) -> Bool {
+        return lhs.num == rhs.num
+    }
+    
 
     
     let id = UUID()

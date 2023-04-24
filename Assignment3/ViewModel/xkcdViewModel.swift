@@ -14,8 +14,16 @@ class xkcdViewModel : ObservableObject {
     private let url1 = "https://xkcd.com/"
     private let url2 = "/info.0.json"
     
-    func fetchData() {
-        for i in 1...365 {
+    @Published var searchTerm: String = ""
+    
+    init() {
+        
+    }
+    
+
+    func fetchData(first: Int, second: Int) {
+        
+        for i in first...second {
             if let url = URL(string: url1 + String(i) + url2) {
                 URLSession
                     .shared
@@ -26,7 +34,8 @@ class xkcdViewModel : ObservableObject {
                             if let data = data {
                                 do {
                                     let results = try JSONDecoder().decode(xkcdModel.self, from: data)
-                                    self.xkcdData.append(results)
+                                    if !self.xkcdData.contains(results) {
+                                        self.xkcdData.append(results) }
                                 } catch {
                                     print(error)
                                 }
