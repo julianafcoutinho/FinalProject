@@ -11,7 +11,7 @@ import SwiftUI
 struct Assignment3App: App {
     var body: some Scene {
         WindowGroup {
-            xkcdStart(amount: 365)
+            xkcdStart(first_amount: 1, second_amount: 10, random_value: Int.random(in: 1..<2700))
         }
     }
 }

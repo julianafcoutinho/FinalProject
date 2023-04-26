@@ -17,10 +17,8 @@ class xkcdViewModel : ObservableObject {
     @Published var searchTerm: String = ""
     
     init() {
-        
     }
     
-
     func fetchData(first: Int, second: Int) {
         
         for i in first...second {
@@ -43,8 +41,6 @@ class xkcdViewModel : ObservableObject {
                         }
                     }.resume()
             }
-            
         }
-        
     }
 }

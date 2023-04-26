@@ -7,13 +7,17 @@
 
 import Foundation
 
-struct xkcdModel : Codable, Identifiable, Comparable {
+struct xkcdModel : Codable, Identifiable, Comparable, Hashable {
     static func < (lhs: xkcdModel, rhs: xkcdModel) -> Bool {
         return lhs.num < rhs.num
     }
     
     static func == (lhs: xkcdModel, rhs: xkcdModel) -> Bool {
         return lhs.num == rhs.num
+    }
+    
+    func hash(into hasher: inout Hasher) {
+        hasher.combine(id)
     }
     
 
